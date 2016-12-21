@@ -1,0 +1,35 @@
+{
+  "app-id": "org.racket_lang.DrRacket",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "3.22",
+  "sdk": "org.gnome.Sdk",
+  "command": "drracket",
+  "finish-args": [
+     /* X11 access */
+     "--socket=x11",
+     /* network access */
+     "--share=network",
+     /* SSL certificates */
+     "--env=SSL_CERT_DIR=/etc/ssl/certs",
+     "--filesystem=/etc/ssl:ro",
+     "--filesystem=/etc/pki:ro",
+     "--filesystem=/etc/ca-certificates:ro",
+     "--filesystem=/var/lib/flatpak"
+     /* full FS access for reading and writing code to disk */
+     "--filesystem=host"
+  ],
+  "modules": [
+    {
+      "name": "drracket",
+      "no-autogen": true,
+      "subdir": "src",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://mirror.racket-lang.org/installers/6.7/racket-6.7-src-builtpkgs.tgz",
+          "sha256": "3608a2d8b5dc5b755f014972140594e39110c5c391b556da43aa349d64c392ed"
+        }
+      ]
+    }
+  ]
+}
