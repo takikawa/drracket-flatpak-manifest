@@ -16,7 +16,10 @@
      "--filesystem=/etc/ca-certificates:ro",
      "--filesystem=/var/lib/flatpak"
      /* full FS access for reading and writing code to disk */
-     "--filesystem=host"
+     "--filesystem=host",
+     /* Needed for dconf to work */
+     "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
+     "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
   "modules": [
     {
