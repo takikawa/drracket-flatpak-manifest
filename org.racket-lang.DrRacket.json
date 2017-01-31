@@ -29,8 +29,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://mirror.racket-lang.org/installers/6.7/racket-6.7-src-builtpkgs.tgz",
-          "sha256": "3608a2d8b5dc5b755f014972140594e39110c5c391b556da43aa349d64c392ed"
+          "url": "https://mirror.racket-lang.org/installers/6.8/racket-6.8-src-builtpkgs.tgz",
+          "sha256": "76b19b0b76c953ebd3314092b107b4b15d1fe8052c6d1f8e5098c163acbde3e6"
         }
       ]
     }
